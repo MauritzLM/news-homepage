@@ -20,29 +20,35 @@
 html {
     font-size: 10px;
     font-family: 'inter-regular', Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 2em 1em;
 
 }
 
 /*  Typography  */
 h1 {
-    font-size: 3.5rem;
-    font-family: 'inter-extra-bold';
+    font-size: 4rem;
+    font-family: 'inter-bold';
     color: hsl(240, 100%, 5%);
+    line-height: 1;
+    margin-bottom: .5em;
 }
 
 h2 {
     font-size: 3.2rem;
+    margin-top: .5em;
 }
 
 h3 {
-    font-size: 2.2rem;
-
+    font-size: 2rem;
+    margin-bottom: .5em;
+    margin-top: 1.3em;
 }
 
 h4 {
@@ -53,8 +59,13 @@ h4 {
 h2,
 h3,
 h4 {
-    font-family: 'inter-bold';
+    /* font-family: "inter-bold"; */
     cursor: pointer;
+}
+
+h3+p {
+    margin-top: .5em;
+    margin-bottom: 2em;
 }
 
 p,
@@ -80,7 +91,7 @@ button {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0 0 3px;
+
 }
 
 .dropdown {
@@ -98,7 +109,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: white;
-
+    visibility: hidden;
 }
 
 .main-navigation ul {
@@ -109,13 +120,13 @@ header {
 }
 
 .main-navigation button {
-    float: right;
     border: none;
     background-color: inherit;
     order: 1;
     align-self: flex-start;
-    padding-top: 18px;
-    padding-right: 10px;
+    position: relative;
+    top: 2em;
+    right: 1.7em;
 }
 
 .main-navigation li a {
@@ -135,29 +146,30 @@ main {
 }
 
 .read-more {
-    padding: 15px 30px 15px 30px;
+    padding: 16px 32px;
     border: none;
     background-color: hsl(5, 85%, 63%);
     color: hsl(36, 100%, 99%);
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-top: 10px;
+    font-family: inherit;
+    font-weight: bold;
 
 }
 
 .new-articles {
     background-color: hsl(240, 100%, 5%);
     color: white;
-    padding: 10px;
+    padding: .5em 2em .01em 2em;
     margin-top: 50px;
     margin-bottom: 35px;
 }
 
 .new-articles h2 {
     color: hsl(35, 77%, 62%);
-    margin-bottom: 10px;
-    padding-left: 10px;
+    margin-bottom: 1em;
 }
 
 .new-articles article p {
@@ -165,7 +177,7 @@ main {
 }
 
 .new-articles article {
-    padding: 10px;
+    /* padding: 5px 10px; */
     color: hsl(36, 100%, 99%);
 }
 
@@ -178,12 +190,13 @@ main {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding: 5px 5px 5px 0px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .top-three div h2 {
     margin: 0;
     color: hsl(233, 8%, 79%);
+    font-family: "inter-bold";
 }
 
 .top-three div h4 {
@@ -192,6 +205,7 @@ main {
 
 .top-three div p {
     margin-bottom: 0;
+    margin-top: 8px;
 }
 
 .attribution {
@@ -217,13 +231,11 @@ h4:hover,
     color: hsl(5, 85%, 63%);
 }
 
-.dropdown:focus-within+.main-navigation {
+
+header:focus-within .main-navigation {
     right: 0;
     top: 0;
-}
-
-.main-navigation+.main-navigation button:focus-within {
-    right: -200px;
+    visibility: visible;
 }
 
 /*  Media Queries  */
@@ -301,6 +313,7 @@ h4:hover,
         position: static;
         height: auto;
         width: auto;
+        visibility: visible;
     }
 
     .main-navigation ul {
