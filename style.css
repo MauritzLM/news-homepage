@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'inter-regular';
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url(./assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'inter-extra-bold';
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'inter-regular', Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*  Typography  */
+h1 {
+    font-size: 3.5rem;
+    font-family: 'inter-extra-bold';
+    color: hsl(240, 100%, 5%);
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+
+}
+
+h4 {
+    font-size: 1.7rem;
+    color: hsl(240, 100%, 5%);
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'inter-bold';
+    cursor: pointer;
+}
+
+p,
+li,
+a {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.7;
+    color: hsl(236, 13%, 42%);
+}
+
+img {
+    max-inline-size: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*  navigation  */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0 3px;
+}
+
+.dropdown {
+    background-color: white;
+    border: none;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.main-navigation {
+    position: absolute;
+    width: 200px;
+    right: -200px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding-left: 0;
+    order: 0;
+    align-self: center;
+}
+
+.main-navigation button {
+    float: right;
+    border: none;
+    background-color: inherit;
+    order: 1;
+    align-self: flex-start;
+    padding-top: 18px;
+    padding-right: 10px;
+}
+
+.main-navigation li a {
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+    padding: 5px;
+    font-size: 1.8rem;
+}
+
+li {
+    margin: 10px 10px 25px 20px;
+
+}
+
+main {
+    margin-top: 20px;
+}
+
+.read-more {
+    padding: 15px 30px 15px 30px;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+
+}
+
+.new-articles {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.new-articles h2 {
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.new-articles article p {
+    color: hsl(233, 8%, 79%);
+}
+
+.new-articles article {
+    padding: 10px;
+    color: hsl(36, 100%, 99%);
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(211, 203, 203, 0.404);
+}
+
+.top-three {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 5px 5px 5px 0px;
+    margin-bottom: 10px;
+}
+
+.top-three div h2 {
+    margin: 0;
+    color: hsl(233, 8%, 79%);
+}
+
+.top-three div h4 {
+    margin: 12px 0 5px 0;
+}
+
+.top-three div p {
+    margin-bottom: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-size: 1rem;
+}
+
+.read-more:hover {
+    background-color: hsl(240, 100%, 5%);
+}
+
+h3:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+h4:hover,
+.main-navigation li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.dropdown:focus-within+.main-navigation {
+    right: 0;
+    top: 0;
+}
+
+.main-navigation+.main-navigation button:focus-within {
+    right: -200px;
+}
+
+/*  Media Queries  */
+@media screen and (min-width: 1000px) {
+
+    /* layout */
+    body {
+        padding: 8em 15em;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            "picture picture new"
+            "heading info new"
+            "one two three";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    /* .featured-article {
+        display: grid;
+        grid-template-areas:
+            "picture picture"
+            "heading info";
+        row-gap: 10px;
+        column-gap: 20px;
+    } */
+
+    .main-image {
+        grid-area: picture;
+    }
+
+    .featured-heading {
+        grid-area: heading;
+        font-size: 5rem;
+        margin-top: 5px;
+    }
+
+    .featured-info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .read-more {
+        width: 45%;
+    }
+
+    .new-articles {
+        grid-area: new;
+        margin: 0;
+    }
+
+    .one {
+        grid-area: one;
+    }
+
+    .two {
+        grid-area: two;
+    }
+
+    .three {
+        grid-area: three;
+    }
+
+    .top-three {
+        padding-top: 20px;
+    }
+
+    /* navigation */
+
+    .main-navigation {
+        position: static;
+        height: auto;
+        width: auto;
+    }
+
+    .main-navigation ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dropdown,
+    .main-navigation button {
+        display: none;
+    }
+
+}
