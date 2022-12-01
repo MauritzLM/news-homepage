@@ -27,8 +27,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2em;
     padding: 2em 1em;
-
 }
 
 /*  Typography  */
@@ -43,6 +43,7 @@ h1 {
 h2 {
     font-size: 3.2rem;
     margin-top: .5em;
+    font-family: 'inter-bold';
 }
 
 h3 {
@@ -103,30 +104,38 @@ header {
 
 .main-navigation {
     position: absolute;
-    width: 200px;
+    width: 250px;
     right: -200px;
-    height: 500px;
+    height: 600px;
     display: flex;
-    justify-content: space-between;
     background-color: white;
     visibility: hidden;
+    z-index: 2;
 }
 
 .main-navigation ul {
     list-style: none;
     padding-left: 0;
-    order: 0;
+    /* order: 0; */
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* gap: 1em; */
+    position: relative;
+    bottom: 6em;
+    right: 2em;
+    height: 40%;
 }
 
 .main-navigation button {
     border: none;
     background-color: inherit;
-    order: 1;
+    /* order: 1; */
     align-self: flex-start;
     position: relative;
     top: 2em;
-    right: 1.7em;
+    left: 14em;
 }
 
 .main-navigation li a {
@@ -134,11 +143,6 @@ header {
     color: hsl(240, 100%, 5%);
     padding: 5px;
     font-size: 1.8rem;
-}
-
-li {
-    margin: 10px 10px 25px 20px;
-
 }
 
 main {
@@ -196,7 +200,7 @@ main {
 .top-three div h2 {
     margin: 0;
     color: hsl(233, 8%, 79%);
-    font-family: "inter-bold";
+    /* font-family: "inter-bold"; */
 }
 
 .top-three div h4 {
@@ -238,6 +242,10 @@ header:focus-within .main-navigation {
     visibility: visible;
 }
 
+header:focus-within+main {
+    opacity: .4;
+}
+
 /*  Media Queries  */
 @media screen and (min-width: 1000px) {
 
@@ -253,17 +261,8 @@ header:focus-within .main-navigation {
             "heading info new"
             "one two three";
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 35px 20px;
+        gap: 2.5em;
     }
-
-    /* .featured-article {
-        display: grid;
-        grid-template-areas:
-            "picture picture"
-            "heading info";
-        row-gap: 10px;
-        column-gap: 20px;
-    } */
 
     .main-image {
         grid-area: picture;
@@ -282,8 +281,13 @@ header:focus-within .main-navigation {
         justify-content: space-between;
     }
 
+    .featured-info p {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
     .read-more {
-        width: 45%;
+        width: 50%;
     }
 
     .new-articles {
@@ -304,21 +308,25 @@ header:focus-within .main-navigation {
     }
 
     .top-three {
-        padding-top: 20px;
+        padding-top: 3em;
     }
 
     /* navigation */
 
     .main-navigation {
         position: static;
-        height: auto;
-        width: auto;
+        height: max-content;
+        width: 100%;
         visibility: visible;
+        flex-direction: row-reverse;
     }
 
     .main-navigation ul {
-        display: flex;
-        justify-content: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        position: static;
+        height: auto;
+        width: 50%;
     }
 
     .dropdown,
