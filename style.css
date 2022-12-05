@@ -66,6 +66,7 @@ h3 {
 .top-three div h3 {
     font-size: 1.7rem;
     color: hsl(240, 100%, 5%);
+    margin: 12px 0 5px 0;
 }
 
 .new-articles article h3+p {
@@ -199,10 +200,6 @@ main {
     margin: 0;
     color: hsl(233, 8%, 79%);
     font-weight: 700;
-}
-
-.top-three div h3 {
-    margin: 12px 0 5px 0;
 }
 
 .top-three div p {
