@@ -27,13 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![mobile screenshot](./design/screenshot-mobile.png)
+![mobile screenshot](./design/screenhot-mobile.png)
 ![desktop screenshot](./design/screenshot-desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://mauritzlm.github.io/news-homepage/)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/news-homepage-html-css-and-javascript-KwxXwCQG6V)
+- Live Site URL: [live site URL](https://mauritzlm.github.io/news-homepage/)
 
 ## My process
 
