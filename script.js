@@ -1,12 +1,12 @@
-// select close button
-// select menu
-// onclick change menu styles
 
-const closeMenuBtn = document.querySelector('.close-menu-btn');
-const menu = document.querySelector('.main-navigation');
-const header = document.querySelector('header');
+(function () {
+    const closeMenuBtn = document.querySelector('.close-menu-btn');
+    // const menu = document.querySelector('.main-navigation');
+    // const header = document.querySelector('header');
 
-closeMenuBtn.addEventListener('click', (e) => {
-    // remove focus from button
-    closeMenuBtn.blur();
-});
+    closeMenuBtn.addEventListener('click', (e) => {
+        // remove focus from button
+        closeMenuBtn.blur();
+    });
+})();
+
