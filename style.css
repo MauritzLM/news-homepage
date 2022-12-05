@@ -31,6 +31,11 @@ body {
     padding: 2em 1em;
 }
 
+.logo {
+    height: 30px;
+    width: 50px;
+}
+
 /*  Typography  */
 h1 {
     font-size: 4rem;
@@ -46,9 +51,10 @@ h2 {
 }
 
 h2,
-h3,
-h4 {
+h3 {
     cursor: pointer;
+    font-family: 'inter-bold';
+    letter-spacing: .2px;
 }
 
 h3 {
@@ -57,12 +63,12 @@ h3 {
     margin-top: 1.3em;
 }
 
-h4 {
+.top-three div h3 {
     font-size: 1.7rem;
     color: hsl(240, 100%, 5%);
 }
 
-h3+p {
+.new-articles article h3+p {
     margin-top: .5em;
     margin-bottom: 2em;
 }
@@ -195,7 +201,7 @@ main {
     font-weight: 700;
 }
 
-.top-three div h4 {
+.top-three div h3 {
     margin: 12px 0 5px 0;
 }
 
@@ -222,7 +228,7 @@ h3:hover {
     color: hsl(35, 77%, 62%);
 }
 
-h4:hover,
+.top-three div h3:hover,
 .main-navigation li a:hover {
     color: hsl(5, 85%, 63%);
 }
