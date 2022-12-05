@@ -27,12 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/screenshot-desktop.png)
+![mobile screenshot](./design/screenshot-mobile.png)
+![desktop screenshot](./design/screenshot-desktop.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://mauritzlm.github.io/news-homepage/)
 
 ## My process
 

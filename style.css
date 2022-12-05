@@ -21,7 +21,6 @@ html {
     font-size: 10px;
     font-family: 'inter-regular', Arial, Helvetica, sans-serif;
     height: 100vh;
-    width: 100vw;
 }
 
 body {
@@ -101,14 +100,14 @@ header {
 }
 
 .main-navigation {
-    position: absolute;
+    position: fixed;
+    right: -370px;
     width: 250px;
-    right: -200px;
     height: 600px;
     display: flex;
     background-color: white;
     visibility: hidden;
-    z-index: 2;
+    z-index: 1;
 }
 
 .main-navigation ul {
@@ -233,6 +232,7 @@ header:focus-within .main-navigation {
     right: 0;
     top: 0;
     visibility: visible;
+
 }
 
 header:focus-within+main {
@@ -244,7 +244,15 @@ header:focus-within+main {
 
     /* layout */
     body {
-        padding: 8em 15em;
+        padding: 8em 0;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        max-width: 1130px;
     }
 
     .logo {
@@ -255,6 +263,11 @@ header:focus-within+main {
     h1 {
         padding-right: 1em;
         margin: 0;
+    }
+
+    header,
+    main {
+        max-width: 1440px;
     }
 
     main {
